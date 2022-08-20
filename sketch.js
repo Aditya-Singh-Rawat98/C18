@@ -9,7 +9,7 @@ var cloudsGroup, cloudImage;
 var obstaclegroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
 var score;
-var gameOverImg,restartingImg;
+var gameOverImg,restartingImg,restart;
 var jumpSound,checkPointSound, dieSound;
 
 function preload(){
@@ -27,7 +27,7 @@ function preload(){
   obstacle5 = loadImage("obstacle5.png");
   obstacle6 = loadImage("obstacle6.png");
 
-  restartImg = loadImage("restart.png");
+  restartingImg = loadImage("restart.png");
   gameOverImg = loadImage("gameOver.png");
 
   jumpSound = loadSound("jump.mp3");
@@ -39,7 +39,7 @@ function setup(){
   createCanvas(600,200);
 
   trex = createSprite(50,180,20,50);
-  trex.addAAnimation("running", trex_running);
+  trex.addAnimation("running", trex_running);
   trex.addAnimation("collided",trex_collided);
 
   trex.scale = 0.5;
